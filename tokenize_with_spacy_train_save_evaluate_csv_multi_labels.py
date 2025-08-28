@@ -23,7 +23,7 @@ import os
 import pandas as pd
 
 # load training data from CSV and replace with full file path including file name
-csv_file = "c:/Users/User/Desktop/Study/BBK/Final Year Project/Step by Step/Step 2 - Build and Train a Classifier Model/training_data2.csv"
+csv_file = "training_data.csv"
 df = pd.read_csv(csv_file)
 
 # extract all unique labels from CSV
