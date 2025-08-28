@@ -21,7 +21,7 @@ import random
 from sklearn.metrics import accuracy_score, f1_score, classification_report, hamming_loss, jaccard_score
 
 # load training data from CSV and replace with full file path including file name
-csv_file = "training_data2.csv"
+csv_file = "training_data.csv"
 df = pd.read_csv(csv_file)
 
 # extract all unique labels from CSV
