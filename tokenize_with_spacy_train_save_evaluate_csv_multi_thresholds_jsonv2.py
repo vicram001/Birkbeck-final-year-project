@@ -7,10 +7,6 @@ import json
 import os
 from sklearn.metrics import f1_score, classification_report, hamming_loss, jaccard_score
 
-# ---------------------------
-# TRAINING PHASE
-# ---------------------------
-
 # load training data from CSV and replace with full file path including file name
 csv_file = "training_data.csv"
 df = pd.read_csv(csv_file)
@@ -63,10 +59,6 @@ print(f"Model saved to {output_dir}")
 
 # reload model
 nlp2 = spacy.load(output_dir)
-
-# ---------------------------
-# THRESHOLD OPTIMISATION
-# ---------------------------
 
 # find the best threshold and evaluate on test_data
 best_threshold, best_f1 = 0.5, 0.0
