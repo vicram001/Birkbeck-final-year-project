@@ -48,7 +48,7 @@ for idx, row in df.iterrows():
 split = int(0.8 * len(train_data))
 train_data, test_data = train_data[:split], train_data[split:]
 
-# create blank model with English tokeniser / pipeline
+# create blank model with English tokenizer / pipeline
 nlp = spacy.blank("en")
 
 # add TextCategoriser (multilabel) to the pipeline
