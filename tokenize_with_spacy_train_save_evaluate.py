@@ -27,7 +27,7 @@ TRAIN_DATA = [
 train_data = TRAIN_DATA
 test_data = TRAIN_DATA
 
-# create blank model with English tokeniser / pipeline
+# create blank model with English tokenizer / pipeline
 nlp = spacy.blank("en")
 
 # add TextCategoriser to the pipeline with default config
