@@ -8,7 +8,7 @@ import os
 from sklearn.metrics import f1_score, classification_report, hamming_loss, jaccard_score
 
 # load training data from CSV and replace with full file path including file name
-csv_file = "c:/Users/User/Desktop/Study/BBK/Final Year Project/Step by Step/Step 2 - Build and Train a Classifier Model/training_data2.csv"
+csv_file = "training_data.csv"
 df = pd.read_csv(csv_file)
 
 # extract all unique labels from CSV
@@ -53,7 +53,7 @@ for epoch in range(epochs):
     print(f"Epoch {epoch+1}, Losses: {losses}")
 
 # save the trained model and replace with full file path including file name
-output_dir = "c:/Users/User/Desktop/Study/BBK/Final Year Project/Step by Step/Step 2 - Build and Train a Classifier Model/textcat_multilabel_model"
+output_dir = "textcat_multilabel_model"
 nlp.to_disk(output_dir)
 print(f"Model saved to {output_dir}")
 
