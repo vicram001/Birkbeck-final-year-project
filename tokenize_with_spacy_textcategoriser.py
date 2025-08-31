@@ -19,7 +19,7 @@ TRAIN_DATA = [
 # split into train/test
 train_data, test_data = train_test_split(TRAIN_DATA, test_size=0.25, random_state=42)
 
-# create blank model with English tokeniser
+# create blank model with English tokenizer
 nlp = spacy.blank("en")
 
 # add TextCategoriser to the pipeline
