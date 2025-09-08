@@ -48,11 +48,11 @@ X_test  = vectorizer.transform(X_test_texts)
 clf = LogisticRegression(max_iter=1000)
 clf.fit(X_train, y_train)
 
-# 7) Evaluate and predict on test set
+# Evaluate and predict on test set
 y_pred = clf.predict(X_test)
 print(classification_report(y_test, y_pred))
 
-# 8) Predict a new text
+# Predict a new text
 new_text = "The government should cut taxes."
 new_processed = preprocess_spacy(new_text)
 new_vec = vectorizer.transform([new_processed])
