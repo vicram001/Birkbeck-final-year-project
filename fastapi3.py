@@ -38,6 +38,7 @@ def save_predictions():
     with open(PREDICTIONS_FILE, "w") as f:
         json.dump(saved_predictions, f, indent=2)
 
+# input endpoint
 @app.post("/predict/", response_model=PredictResponse)
 def predict(request: PredictRequest):
     result = clf.predict(request.text, top_k=request.top_k, return_scores=True)
@@ -49,12 +50,12 @@ def predict(request: PredictRequest):
         "all_scores": result["all_scores"]
     }
 
-# input endpoint
+# return endpoint
 @app.get("/predictions/")
 def list_predictions():
     return saved_predictions
 
-# return endpoint
+# clear results endpoint
 @app.post("/clear_predictions/")
 def clear_predictions():
     """Clear all stored predictions (memory + file)."""
